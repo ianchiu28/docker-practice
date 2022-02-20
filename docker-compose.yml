@@ -2,6 +2,7 @@ version: '3.9'
 
 services:
   web-app:
+    container_name: web-app
     build:
       context: .
     ports:
@@ -14,6 +15,7 @@ services:
       - postgres
 
   postgres:
+    container_name: postgres
     image: postgres
     restart: always
     environment:
